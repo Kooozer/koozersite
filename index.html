@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>koozer.co.uk</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 <body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+    </div>
 
+    <div id="menu-container" style="display:none;">
+        <h2>Select Calculation</h2>
+        <button onclick="showCalculation('addition')">Addition</button>
+        <button onclick="showCalculation('subtraction')">Subtraction</button>
+    </div>
+
+    <div id="calculation-container" style="display:none;">
+        <h2 id="calc-title"></h2>
+        <input type="number" id="value1" placeholder="Value 1">
+        <input type="number" id="value2" placeholder="Value 2">
+        <button onclick="calculate()">Calculate</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
