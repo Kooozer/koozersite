@@ -1,0 +1,127 @@
+Index: index.html
+===================================================================
+diff --git a/index.html b/index.html
+deleted file mode 100644
+--- a/index.html	(revision 30e0b15b476b7291e77036e972101572ad1227ea)
++++ /dev/null	(revision 30e0b15b476b7291e77036e972101572ad1227ea)
+@@ -1,34 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-  <head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+-    <title>koozer.co.uk</title>
+-    <link rel="stylesheet" href="style.css">
+-  </head>
+-<body>
+-    <div id="login-container">
+-        <h2>Login</h2>
+-        <input type="text" id="username" placeholder="Username" required>
+-        <input type="password" id="password" placeholder="Password" required>
+-        <button onclick="login()">Login</button>
+-    </div>
+-
+-    <div id="menu-container" style="display:none;">
+-        <h2>Select Calculation</h2>
+-        <button onclick="showCalculation('addition')">Addition</button>
+-        <button onclick="showCalculation('subtraction')">Subtraction</button>
+-    </div>
+-
+-    <div id="calculation-container" style="display:none;">
+-        <h2 id="calc-title"></h2>
+-        <input type="number" id="value1" placeholder="Value 1">
+-        <input type="number" id="value2" placeholder="Value 2">
+-        <button onclick="calculate()">Calculate</button>
+-        <p id="result"></p>
+-    </div>
+-
+-    <script src="index.js"></script>
+-</body>
+-</html>
+Index: index.js
+===================================================================
+diff --git a/index.js b/index.js
+deleted file mode 100644
+--- a/index.js	(revision 30e0b15b476b7291e77036e972101572ad1227ea)
++++ /dev/null	(revision 30e0b15b476b7291e77036e972101572ad1227ea)
+@@ -1,31 +0,0 @@
+-function login() {
+-    const username = document.getElementById('username').value;
+-    const password = document.getElementById('password').value;
+-
+-    if (username === 'u' && password === 'p') {
+-        document.getElementById('login-container').style.display = 'none';
+-        document.getElementById('menu-container').style.display = 'block';
+-    } else {
+-        alert('Invalid login credentials');
+-    }
+-}
+-
+-function showCalculation(type) {
+-    document.getElementById('menu-container').style.display = 'none';
+-    document.getElementById('calculation-container').style.display = 'block';
+-    document.getElementById('calc-title').innerText = type.charAt(0).toUpperCase() + type.slice(1);
+-}
+-
+-function calculate() {
+-    const value1 = parseFloat(document.getElementById('value1').value);
+-    const value2 = parseFloat(document.getElementById('value2').value);
+-    let result;
+-
+-    if (document.getElementById('calc-title').innerText === 'Addition') {
+-        result = value1 + value2;
+-    } else if (document.getElementById('calc-title').innerText === 'Subtraction') {
+-        result = value1 - value2;
+-    }
+-
+-    document.getElementById('result').innerText = 'Result: ' + result;
+-}
+Index: style.css
+===================================================================
+diff --git a/style.css b/style.css
+deleted file mode 100644
+--- a/style.css	(revision 30e0b15b476b7291e77036e972101572ad1227ea)
++++ /dev/null	(revision 30e0b15b476b7291e77036e972101572ad1227ea)
+@@ -1,39 +0,0 @@
+-body {
+-    font-family: Arial, sans-serif;
+-    background-color: #333;
+-    color: #ddd;
+-    display: flex;
+-    justify-content: center;
+-    align-items: center;
+-    height: 100vh;
+-    margin: 0;
+-}
+-
+-#login-container, #menu-container, #calculation-container {
+-    background-color: #444;
+-    padding: 20px;
+-    border-radius: 5px;
+-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+-    text-align: center;
+-}
+-
+-input {
+-    display: block;
+-    margin: 10px auto;
+-    padding: 10px;
+-    width: 80%;
+-}
+-
+-button {
+-    padding: 10px 20px;
+-    margin: 10px;
+-    background-color: #007BFF;
+-    color: white;
+-    border: none;
+-    border-radius: 5px;
+-    cursor: pointer;
+-}
+-
+-button:hover {
+-    background-color: #0056b3;
+-}
+diff --git a/main.py b/main.py
+new file mode 100644
