@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="pathToExecutable" value="C:\Users\callu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts\black.exe" />
+    <option name="sdkName" value="C:\Users\callu\AppData\Local\Programs\Python\Python37-32\python.exe" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="C:\Users\callu\AppData\Local\Programs\Python\Python37-32\python.exe" project-jdk-type="Python SDK" />
+  <component name="PyCharmProfessionalAdvertiser">
+    <option name="shown" value="true" />
+  </component>
+</project>
